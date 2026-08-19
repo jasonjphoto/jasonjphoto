@@ -476,12 +476,36 @@
 
   /* ── CONTACT PAGE ── */
   .contact-page-hero {
-    background-image: linear-gradient(rgba(17,17,17,0.62), rgba(17,17,17,0.62)), url('new%20cropped%20lighthouse.jpg');
-    background-size: cover;
-    background-position: center, center calc(50% + 45px);
-    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    background: var(--dark);
     padding: 80px 80px 60px;
     text-align: center;
+  }
+
+  .contact-page-hero::before {
+    content: '';
+    position: absolute;
+    inset: -80px 0 0 0;
+    background-image: url('new%20cropped%20lighthouse.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: translateY(45px);
+    z-index: 0;
+  }
+
+  .contact-page-hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(17,17,17,0.40);
+    z-index: 1;
+  }
+
+  .contact-page-hero > * {
+    position: relative;
+    z-index: 2;
   }
 
   .contact-page-hero h1 {
