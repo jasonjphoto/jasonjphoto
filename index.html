@@ -520,12 +520,12 @@
     .hamburger { display: flex; }
 
     .hero-bg { background-size: cover; background-position: center 30%; }
-    .hero { height: auto; min-height: calc(100vh - var(--nav-h)); min-height: calc(100svh - var(--nav-h)); justify-content: flex-end; padding-top: 8px; padding-bottom: 24px; }
-    .hero-content { padding: 0 20px; }
+    .hero { height: auto; min-height: calc(100vh - var(--nav-h)); min-height: calc(100svh - var(--nav-h)); justify-content: flex-start; padding-top: 8px; padding-bottom: 24px; }
+    .hero-content { padding: 0 20px; display: flex; flex-direction: column; flex: 1; }
     .hero .hero-eyebrow { font-size: 1.15rem; margin-bottom: 4px; line-height: 1.22; max-width: 90%; }
-    .hero h1 { font-size: 1.8875rem; margin-top: 30px; margin-bottom: 8px; line-height: 1.06; }
+    .hero h1 { font-size: 1.8875rem; margin-top: auto; margin-bottom: 8px; line-height: 1.06; }
     .hero p { font-size: 1.0375rem; line-height: 1.2; margin-bottom: 14px; max-width: 68%; }
-    .hero .btn { padding: 10px 22px; }
+    .hero .btn { padding: 10px 22px; align-self: flex-start; }
     .intro-strip { grid-template-columns: 1fr; padding: 48px 24px; gap: 32px; }
     .gallery-grid { padding: 0 16px 48px; columns: 2; }
     .about-hero { grid-template-columns: 1fr; padding: 60px 24px; gap: 40px; }
