@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jason Janes Photography</title>
+<script>
+  // Send old Wix page links (and QR codes) to the matching section of the new site.
+  (function () {
+    var p = location.pathname.toLowerCase();
+    var map = [
+      ['contact', 'contact'],
+      ['faq-for-school', 'faq-schools'], ['school', 'faq-schools'],
+      ['faq', 'faq-parents'], ['parent', 'faq-parents'],
+      ['about', 'about'],
+      ['gallery', 'gallery'], ['portfolio', 'gallery']
+    ];
+    var target = '';
+    for (var i = 0; i < map.length; i++) {
+      if (p.indexOf(map[i][0]) !== -1) { target = '#' + map[i][1]; break; }
+    }
+    location.replace('/' + target);
+  })();
+</script>
+</head>
+<body><p><a href="/">Go to Jason Janes Photography</a></p></body>
+</html>

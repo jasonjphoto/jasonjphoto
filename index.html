@@ -844,6 +844,15 @@
     document.getElementById('navLinks').classList.remove('open');
   }
 
+  // Open the section named in the URL hash (e.g. jasonjphoto.com/#contact),
+  // so old Wix links and QR codes land on the right section.
+  function showPageFromHash() {
+    var id = (location.hash || '').replace('#', '').toLowerCase();
+    if (id && document.getElementById('page-' + id)) showPage(id);
+  }
+  window.addEventListener('hashchange', showPageFromHash);
+  document.addEventListener('DOMContentLoaded', showPageFromHash);
+
   function toggleMenu() {
     document.getElementById('navLinks').classList.toggle('open');
   }
